@@ -1,0 +1,48 @@
+.todo-card {
+    width: 60%;
+    margin: 10% auto;
+}
+input {
+    width: 89%;
+}
+p-card header {
+    color: crimson;
+    text-align: center;
+}
+ol{
+    list-style-type: none;
+}
+.btn1 {
+    background-color: red;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 10px;
+    float: right;
+}
+.btn2 {
+    background-color: rgb(194, 151, 11);
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 10px;
+    float: right;
+    margin-right: 10px;
+}
+.btn3{
+    background-color: green;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 10px;
+    float: right;
+    margin-right: 10px;
+}
+.btn4 {
+    background-color: red;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 10px;
+    float: right;
+}
+li {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 15px;
+}

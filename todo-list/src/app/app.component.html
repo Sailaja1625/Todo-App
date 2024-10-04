@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center">
+  <p-card class="todo-card" header="Todo Application">
+    <input type="text" pInputText [(ngModel)]="task" />
+    <p-button class="ms-2 mb-3" label="Add" [disabled]="!task || task.trim() === '' " (click)="addTask()" severity="success" />
+
+    <ol class="mt-4 p-0" *ngIf="tasks.length > 0">
+      <li class="mb-3" *ngFor="let task of tasks; let i = index;">
+        <div *ngIf="editingIndex !==i; else editMode" class="d-flex justify-content-between w-100">
+          {{task}}
+          <div>
+            <button class="btn1 ml-2" pButton label="Delete" (click)="removeTask(i)"></button>
+            <button class="btn2 mr-3" pButton label="Edit" (click)="editTask(i)"></button>
+          </div>
+        </div>
+
+
+
+        <!-- Edit mode -->
+        <ng-template #editMode>
+          <div class="d-flex justify-content-between">
+            <div class="flex-grow-1">
+            <input type="text" pInputText [(ngModel)]="editTaskValue" class="form-control mr-2" />
+            </div>
+            <div class="">
+              <button class="btn4 mr-2"  pButton label="Cancel"  (click)="cancelEdit()"></button>
+              <button class="btn3 ml-2" pButton label="Save"  (click)="saveTask()"></button>
+            </div>
+          </div>
+        </ng-template>
+      </li>
+    </ol>
+  </p-card>
+</div>
